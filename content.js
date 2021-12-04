@@ -1,8 +1,13 @@
 function admitNow() {
     for(let item of document.getElementsByTagName("span")) {
-        if (item.innerHTML == "Admit") {
-            item.click()
+        if ((item.innerHTML == "Admit") || (item.innerHTML == "Chấp nhận") ){
+            item.click();
         }
+        else if ( (item.innerHTML == "View all") || (item.innerHTML == "Xem tất cả")){
+            item.click();
+            setTimeout(function(){item.click();},800);
+        }
+        
     }
 }
 
